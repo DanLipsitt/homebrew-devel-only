@@ -4,8 +4,8 @@ class DockerMachine < Formula
   homepage "https://github.com/docker/machine"
 
   devel do
-    url "https://github.com/docker/machine/archive/0.0.2.tar.gz"
-    sha1 "adcc7128abdbaae60ba3c58d6485df939c7e5510"
+    url "https://github.com/docker/machine/archive/v0.1.0-rc2.tar.gz"
+    sha1 "5251d959f6ff1ee6a7e7fb0d7b23aeb6152d7d3c"
   end
 
   head "https://github.com/docker/machine.git"
@@ -87,6 +87,26 @@ class DockerMachine < Formula
   go_resource "github.com/mitchellh/go-homedir" do
     url "https://github.com/mitchellh/go-homedir.git",
       :revision => "7d2d8c8a4e078ce3c58736ab521a40b37a504c52"
+  end
+
+  go_resource "golang.org/x/crypto" do
+    url "https://github.com/golang/crypto.git",
+        :revision => "1fbbd62cfec66bd39d91e97749579579d4d3037e"
+    sha1 "24865288dd0032d917ff2347a4fd10d00f986cbe"
+  end
+
+  go_resource "github.com/rackspace/gophercloud" do
+    url "https://github.com/rackspace/gophercloud.git",
+        :revision => "2e7ab378257b8723e02cbceac7410be4db286436"
+    sha1 "ab083063e888527c1a8facdd43e9e4338e63e777"
+  end
+
+  go_resource "github.com/racker/perigee" do
+    url "https://github.com/racker/perigee.git"
+  end
+
+  go_resource "github.com/mitchellh/mapstructure" do
+    url "https://github.com/mitchellh/mapstructure.git"
   end
 
   def install
