@@ -102,11 +102,13 @@ class DockerMachine < Formula
   end
 
   go_resource "github.com/racker/perigee" do
-    url "https://github.com/racker/perigee.git"
+    url "https://github.com/racker/perigee.git",
+        :revision => "0c00cb0a026b71034ebc8205263c77dad3577db5"
   end
 
   go_resource "github.com/mitchellh/mapstructure" do
-    url "https://github.com/mitchellh/mapstructure.git"
+    url "https://github.com/mitchellh/mapstructure.git",
+        :revision => "740c764bc6149d3f1806231418adb9f52c11bcbf"
   end
 
   def install
